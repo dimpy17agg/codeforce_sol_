@@ -1,0 +1,38 @@
+#include <iostream>                      // importing library
+using namespace std;                     // declaring syntax
+
+int main() 
+{                   
+	int t;                                 // declaring testcases
+	cin>>t;                                // taking number of testcases
+	int d[10]={6,2,5,5,4,5,6,3,7,6};       // taking array & storing elements.
+	while(t--)
+	{
+	    int a,b,c,p,i,sum=0;
+	    cin>>a>>b;                         // taking input
+	    c=a+b;
+	    while(c!=0)
+	    {
+	        p=c%10;
+	        sum+=d[p];
+	        c=c/10;
+	    }
+	    cout<< sum << '\n';                // output result
+	}
+	return 0;
+}
+
+
+
+
+/*
+Example Input
+3
+123 234
+10101 1010
+4 4
+Example Output
+13
+10
+7
+*/
